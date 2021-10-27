@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="groups.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Farbe</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="admindashboard.html" class="active1">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="teachers.html" class="active">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Teachers</span>
+          </a>
+        </li>
+        <li>
+          <a href="students.html" class="active">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Students</span>
+          </a>
+        </li>
+        <li>
+          <a href="courses.html" class="active">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Courses</span>
+          </a>
+        </li>
+        <li>
+          <a href="groups.html" class="active2">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Groups</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name">Posters</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Webinar Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="classbooking.html">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Class Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-message' ></i>
+            <span class="links_name">Recorded Classes</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Settings</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name">Admin</span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Teachers</div>
+            <div class="teachernumber">0</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Booked Classes</div>
+            <div class="classnumber">0</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Students</div>
+            <div class="studentnumber">0</div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Courses</div>
+            <div class="coursenumber">0</div>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="sales-boxes">
+        <div class="top-sales box">
+          <div class="teachers">
+          <div class="title">Groups</div>
+          <ul class="top-sales-details">
+            <ul id="myList">
+            
+            </ul>
+          </div>
+         
+         
+        </div>
+
+        <div class="recent-sales box">
+          <div class="title">Course Details</div>
+          <div class="teacherdetails"> 
+          <div class="teachername">
+            <div class="namet">Teacher Name : </div>
+            <div class="name1"></div>
+           
+          </div>
+         
+                </div>
+                <div class="title1">Students</div>
+                <ul id="myList4">
+            
+                </ul>
+            
+          <div class="sales-details">
+            <ul class="details">
+                <div class="button">
+                  <a id="button1">Create Group</button>
+                  </div>
+
+                  <!-- The Modal -->
+                  <div id="myModal" class="modal">
+                  
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <div class="forms-out">
+                        <div class="forms-in">
+                          <div id="registration-page" >
+                              <button id="show-home">Home</button>
+                            <h3>Add details</h3>
+                            Group Name <br />
+                            <input type="email" id="registration-name" /><br />
+                            <div class="dropdown">
+                              Teacher Name <br />
+                              <input type="text" id="dropbtn" name="dropbtn" size="45" value="Select Teacher">
+
+                              <div class="dropdown-content">
+                                <ul id="myList1">
+            
+                                </ul>
+                               
+                              </div>
+                            </div>
+                            <div class="dropdown1">
+                            Student list  <br />
+                            <input type="text" id="dropbtn1" name="dropbtn1" size = "70" value="Select Student">
+                            <div class="dropdown1-content1">
+                              <ul id="myList2">
+          
+                              </ul>
+                            </div>
+                            </div>   
+                           
+                            
+                            <center><button id="register">Save</button></center>
+                          </div>
+                  
+                          <div id="login-page" class="hide">
+                            <button id="show-register">Sign Up</button>
+                            <h3>Sign In</h3>
+                            Email <br />
+                            <input type="email" id="login-email" /><br />
+                            Password <br />
+                            <input type="password" id="login-password" /><br />
+                            <p id="forgot-password">Forgot Password</p>
+                            <center><button id="login">Sign In</button></center>
+                          </div>
+                  
+                         
+                        </div>                    </div>
+                  
+                  </div>
+          </div>
+         
+        </div>
+      
+      </div>
+    </div>
+  </section>
+<script src="group.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use-->
+  <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+ <script>
+   // Your web app's Firebase configuration
+   var  firebaseConfig = {
+ apiKey: "AIzaSyAPUZL6sv9HLFZWwqvi0FwC7bQGHg_FB5U",
+ authDomain: "wireless-buzzer-5da2e.firebaseapp.com",
+ databaseURL: "https://wireless-buzzer-5da2e-default-rtdb.firebaseio.com",
+ projectId: "wireless-buzzer-5da2e",
+ storageBucket: "wireless-buzzer-5da2e.appspot.com",
+ messagingSenderId: "32882967911",
+ appId: "1:32882967911:web:0e58f308bbda83cbd2dbc2"
+};
+   // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+ </script>
+  <script>
+       const auth = firebase.auth();
+      var database = firebase.database();
+    var teachers_data = [],email_data = []
+    var course_data = [],contact_data = []
+    var job_data = [],class_data = []
+    var parent_data = [],parentcontact_data = []
+    var teachername_data = [],students_data = []
+
+    var key,name_val,course_val;
+    var teachers = [],t = [];
+ var userDataRef = firebase.database().ref("Groups").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+   key = childSnapshot.key;
+  var childData = childSnapshot.val();              
+  name_val = childSnapshot.val().groupname;
+  course_val = childSnapshot.val().teachername;
+  course_data.push(course_val)
+  teachers_data.push(name_val);
+
+  email_data.push(childSnapshot.val().day)
+  contact_data.push(childSnapshot.val().early)
+  job_data.push(childSnapshot.val().night)
+  class_data.push(childSnapshot.val().weekend)
+  parent_data.push(childSnapshot.val().info)
+
+
+  });
+
+  let list = document.getElementById("myList");
+  list.style.width = "350px"
+  teachers_data.forEach((item)=>{
+  let li = document.createElement("li");
+  let a = document.createElement("a");
+  let a1 = document.createElement("a");
+  a.text = "more info"
+  a.style.backgroundColor="lightblue";
+  a.style.color = "black";
+  a.style.borderRadius = "5px";
+  a.style.padding = "3px";
+  a.style.width = "90px"
+  a.style.position = "relative"
+  a1.text = "Edit info" 
+  a1.style.width = "90px";
+  a1.style.backgroundColor="black";
+  a1.style.color = "lightblue";
+  a1.style.borderRadius = "5px";
+  a1.style.paddingLeft = "12px";
+  a1.style.paddingTop = "3px";
+  a1.style.paddingBottom = "3px";
+  var modal = document.getElementById("myModal");
+  var index = teachers_data.indexOf(item); // 1
+
+  a.addEventListener("click",()=>{
+    if(document.getElementById("myList4").childElementCount === 0)
+  {updatestudent()}
+
+else{
+  let menu = document.getElementById('myList4');
+while (menu.firstChild) {
+    menu.removeChild(menu.firstChild);
+}
+updatestudent();
+}
+  
+});
+function updatestudent()
+{
+  document.querySelector(".name1").innerHTML = course_data[index];
+    var userRef = firebase.database().ref("Groups/"+item+"/").orderByKey();
+    userRef.once("value").then(function(snapshot) {
+   // snapshot.forEach(function(childSnapshot) {
+  name_val = snapshot.val().students;
+  students_data.push(name_val)
+  console.log(students_data);
+  let list4 = document.getElementById("myList4");
+  name_val.forEach((item)=>{
+  let li = document.createElement("li");
+  li.innerText = item;
+  li.style.color = "black"
+  li.style.fontWeight = 500
+  li.style.marginLeft = "22px"
+  list4.appendChild(li);
+
+})
+
+//});
+});
+}
+function updatestudent1()
+{
+    var userRef = firebase.database().ref("Groups/"+item+"/").orderByKey();
+    userRef.once("value").then(function(snapshot) {
+   // snapshot.forEach(function(childSnapshot) {
+  name_val = snapshot.val().students;
+  students_data.push(name_val)
+  console.log(students_data);
+  let list4 = document.getElementById("myList2");
+  name_val.forEach((item)=>{
+  let li = document.createElement("li");
+  li.innerText = item;
+  //li.style.color = "black"
+  li.style.fontWeight = 500
+  li.style.marginLeft = "22px"
+  list4.appendChild(li);
+
+})
+
+//});
+});
+}
+  
+  a1.addEventListener("click",()=>{
+    modal.style.display = "block";
+        document.querySelector("#registration-name").value = teachers_data[index];
+        document.querySelector("#dropbtn").value = course_data[index];
+        document.querySelector("#dropbtn1").value = "students";
+     
+        if(document.getElementById("myList2").childElementCount === 0)
+  {updatestudent1()}
+
+else{
+  let menu = document.getElementById('myList2');
+while (menu.firstChild) {
+    menu.removeChild(menu.firstChild);
+}
+updatestudent1();
+}  })
+
+ 
+
+  li.innerText = item;
+  li.style.color = "black"
+  li.style.fontWeight = 500
+    li.appendChild(a);
+    li.append(a1);
+
+  list.appendChild(li);
+
+})
+
+});
+var coursename;
+var sample;
+function check(){
+  var userDataRef = firebase.database().ref("users/teachers").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+   key = childSnapshot.key;
+   if(childSnapshot.val().username.includes(document.querySelector("#dropbtn").value))
+   {
+  t.push( childSnapshot.val().username)
+   }
+  });
+  
+  let list = document.getElementById("myList1");
+  t.forEach((item)=>{
+  let li = document.createElement("li");
+  var index = teachers.indexOf(item); 
+  li.innerText = item;
+  list.appendChild(li);
+
+  li.addEventListener("click",()=>{
+    document.querySelector("#dropbtn").value = item;
+
+  })
+
+ 
+})
+
+});   
+     }
+
+     teachers = [];
+var userDataRef = firebase.database().ref("users/teachers").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+
+snapshot.forEach(function(childSnapshot) {
+   key = childSnapshot.key;
+  teachers.push( childSnapshot.val().username)
+  });
+  let list = document.getElementById("myList1");
+  teachers.forEach((item)=>{
+  let li = document.createElement("li");
+  var index = teachers.indexOf(item); 
+  li.innerText = item;
+  list.appendChild(li);
+
+  li.addEventListener("click",()=>{
+    document.querySelector("#dropbtn").value = item;
+    var ref = firebase.database().ref("users/teachers/"+item).orderByKey();
+    ref.once("value").then(function(snapshot){
+      updates(document.querySelector("#dropbtn").value);
+     
+    })
+
+  })
+ 
+})
+
+});
+
+
+var listdata=[];
+document.querySelector('#register').addEventListener("click",()=>{
+ var listItems = document.getElementById("myList2").querySelectorAll("li")
+ for (let i = 0; i <= listItems.length - 1; i++) {
+    listdata.push(listItems[i].innerText.replace('Remove',''));
+}
+console.log(listdata)
+  database.ref('Groups/'+document.querySelector("#registration-name").value+'/').update({
+    teachername: document.querySelector("#dropbtn").value,
+    students:listdata,
+    groupname: document.querySelector("#registration-name").value
+    
+    })
+
+    database.ref('users/teachers/'+document.querySelector("#dropbtn").value+'/').update({
+      
+      groupname: document.querySelector("#registration-name").value
+    })
+
+    for(var j=0;j<listdata.length;j++)
+    {
+      database.ref('users/students/'+listdata[j]+'/').update({
+        groupname: document.querySelector("#registration-name").value
+      })
+    }
+    alert("Group created successfully!!")
+})
+
+var teachers_data2 = [],class_data2=[],course_data2=[],students_data2=[];  
+ var userDataRef = firebase.database().ref("users/teachers").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+            
+  var name_val = childSnapshot.val().username;
+  teachers_data2.push(name_val);
+  });
+  document.querySelector(".teachernumber").innerText =   teachers_data2.length;
+});
+firebase.database().ref("users/students").orderByKey().once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+  var name_val = childSnapshot.val().username;
+  students_data2.push(name_val);
+  });
+  document.querySelector(".studentnumber").innerText =   students_data2.length;
+});
+
+firebase.database().ref("classes/booked").orderByKey().once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+  var name_val = childSnapshot.val().teachername;
+  class_data2.push(name_val);
+  });
+  document.querySelector(".classnumber").innerText =   class_data2.length;
+});
+
+firebase.database().ref("courses").orderByKey().once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+  var name_val = childSnapshot.val().course;
+  course_data2.push(name_val);
+  });
+  document.querySelector(".coursenumber").innerText =   course_data2.length;
+});
+
+
+var t=[];
+function updates(teachern){
+
+     var userDataRef = firebase.database().ref("users/students").orderByKey();
+userDataRef.once("value").then(function(snapshot) {
+snapshot.forEach(function(childSnapshot) {
+ 
+   if(teachern.toLowerCase()==(childSnapshot.val().teachername.toLowerCase()))
+   {
+    t.push( childSnapshot.val().username)
+   }
+  
+  });
+  let list = document.getElementById("myList2");
+  t.forEach((item)=>{
+  let li = document.createElement("li");
+  var index = t.indexOf(item); 
+  li.innerText = item;
+  let a = document.createElement("a");
+  a.text = "Remove"
+  a.style.backgroundColor="black";
+  a.style.color = "white";
+  a.style.fontSize="15px";
+  a.style.marginLeft = "5px";
+  a.style.borderRadius = "5px";
+  a.style.width = "100px"
+  padding="3px";
+  var liList = document.getElementById("myList2").getElementsByTagName("li").length;
+  if(liList === 0)
+  {
+    li.append(a);
+    list.appendChild(li);
+  }
+  else{
+    list.innerHTML = '';
+    li.append(a);
+    list.appendChild(li);
+  }
+  a.addEventListener("click",()=>{
+    list.removeChild(li)
+  })
+ 
+  li.addEventListener("click",()=>{
+    document.querySelector("#dropbtn1").value = item;
+  })
+ 
+})
+
+}); 
+}
+
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+
+document.querySelector("#show-register").addEventListener("click", () => {
+        showRegistration();
+      });
+
+      const showRegistration = () => {
+        document.querySelector("#registration-page").classList.remove("hide");
+        document.querySelector("#login-page").classList.add("hide");
+        document.querySelector("#homepage").classList.add("hide");
+      };
+
+
+      document.querySelector("#show-home").addEventListener("click",()=>{
+          location.href="groups.html"
+      })
+    
+
+    
+
+    
+
+      const login = () => {
+        const email = document.querySelector("#login-email").value;
+        const password = document.querySelector("#login-password").value;
+
+        if (email.trim() == "") {
+          alert("Enter Email");
+        } else if (password.trim() == "") {
+          alert("Enter Password");
+        } else {
+          authenticate(email, password);
+        }
+      };
+
+      document.querySelector("#login").addEventListener("click", () => {
+        login();
+      });
+
+      //sign in when you hit enter
+      document
+        .querySelector("#login-password")
+        .addEventListener("keyup", (e) => {
+          if (event.keyCode === 13) {
+            e.preventDefault();
+
+            login();
+          }
+        });
+
+      const authenticate = (email, password) => {
+        const auth = firebase.auth();
+        auth.signInWithEmailAndPassword(email, password);
+        firebase
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage);
+          });
+      };
+
+      const showHomepage = () => {
+        document.querySelector("#registration-page").classList.add("hide");
+        document.querySelector("#login-page").classList.add("hide");
+        document.querySelector("#homepage").classList.remove("hide");
+      };
+
+    
+
+      
+
+      document
+        .querySelector("#forgot-password")
+        .addEventListener("click", () => {
+          const email = document.querySelector("#login-email").value;
+          if (email.trim() == "") {
+            alert("Enter Email");
+          } else {
+            forgotPassword(email);
+          }
+        });
+
+      const forgotPassword = (email) => {
+        auth
+          .sendPasswordResetEmail(email)
+          .then(function () {
+            alert("email sent");
+          })
+          .catch(function (error) {
+            alert("invalid email or bad network connection");
+          });
+      };
+
+ </script>
+
+</body>
+</html>
+
